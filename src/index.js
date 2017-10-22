@@ -14,11 +14,16 @@ import NotFoundBoard from "./component/NotFoundBoard";
 
 //import registerServiceWorker from './registerServiceWorker';
 
+const ScrollToTop = () => {
+  window.scrollTo(0, 0);
+  return null;
+};
+
 ReactDOM.render((
     <BrowserRouter>
       <div>
+        <Route component={ScrollToTop} />
         <Route path="/" component={App} />
-        {/*<Route exact path="/" component={DashBoard} />*/}
         <Switch>
           <Route exact path="/" component={DashBoard} />
           <Route path="/articles" component={ArticleBoard} />
