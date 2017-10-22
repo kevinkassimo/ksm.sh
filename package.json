@@ -1,0 +1,30 @@
+{
+  "name": "mysite",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "jquery": "^3.2.1",
+    "octicons": "^7.0.1",
+    "percircle": "^1.0.21",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-octicon": "^2.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.14",
+    "react-spark-scroll": "^4.0.0",
+    "react-spark-scroll-gsap": "^4.0.0",
+    "react-spark-scroll-rekapi": "^4.0.0",
+    "react-transition-group": "^2.2.1",
+    "reactjs-percentage-circle": "^1.0.0",
+    "reactstrap": "^5.0.0-alpha.3",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

@@ -1,0 +1,8 @@
+.SplitBoard li:before {
+    content: "\2726  ";
+    font-size: 1.5em;
+}
+
+.SplitBoard {
+    z-index: 0;
+}
