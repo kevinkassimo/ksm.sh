@@ -15,6 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     // Hack body CSS
+    document.title = "Welcome to KSM.sh";
     //document.body.style.backgroundImage = "url(../img/milkyway.jpg)";
   }
 
