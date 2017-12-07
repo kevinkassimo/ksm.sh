@@ -56,7 +56,9 @@ class DashBoard extends Component {
       {title: "Education", caption: "University of California, Los Angeles (UCLA)"},
       {title: "Degree", caption: "B.S. Computer Science (Junior, graduating Spring 2019)"},
       {title: "GPA", caption: "3.97 / 4.00"},
-      {title: "Course Taken", caption: "Operating System, Networking, Programming Language, Database, Artificial Intelligence"}
+      {title: "Course Taken", caption: "Operating System, Networking, Programming Language, Database, Artificial Intelligence"},
+      {title: "Activites", caption: "Web Developer @ DailyBruin Prime"},
+      {title: "Honors", caption: "UCLA UPE Computer Science Honor Society Member"}
     ];
 
     let contactList = [
@@ -70,15 +72,17 @@ class DashBoard extends Component {
       {name: "JavaScript", percent: "95%"},
       {name: "Unity3D/C#", percent: "90%"},
       {name: "C", percent: "90%"},
-      {name: "HTML/CSS", percent: "80%"},
+      {name: "HTML/CSS/Sass", percent: "80%"},
       {name: "React", percent: "75%"},
       {name: "Express", percent: "75%"},
+      {name: "Python", percent: "75%"},
       {name: "Node", percent: "70%"},
       {name: "Go", percent: "65%"},
-      {name: "jQuery", percent: "50%"},
+      {name: "jQuery", percent: "60%"},
       {name: "Linux/Shell", percent: "40%"},
-      {name: "Python", percent: "40%"},
       {name: "SQL", percent: "35%"},
+      {name: "Jinja", percent: "35%"},
+      {name: "PHP", percent: "35%"},
       {name: "Swift", percent: "35%"},
     ];
 

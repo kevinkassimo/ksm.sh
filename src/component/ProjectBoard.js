@@ -44,6 +44,7 @@ class ProjectBoard extends Component {
     let listProjects = [
       {year: 2017, projects: [
         {title: "UDEngine", caption: "A minimal and extensible bullet-hell game framework on Unity3D", link: "https://github.com/UD-Engine/UDEngine"},
+        {title: "DailyBruin Prime", caption: "Online Magazine for DailyBruin Prime, with Jinja2/Foundation/Flask, etc.", link: "https://github.com/daily-bruin/prime"},
         {title: "KSM.sh", caption: "THIS site, with React and Bootstrap (I am too lazy to work too much on CSS)", link: "https://github.com/kevinkassimo/ksm.sh"},
         {title: "GOKey", caption: "Command-line password vault using AES, written in Go", link: "https://github.com/kevinkassimo/gokey"},
         {title: "wotHappen", caption: "Bot on Cisco Spark using Microsoft Cognitive Service API and Sumy library", link: "https://github.com/wotHappen/wothappen"},
