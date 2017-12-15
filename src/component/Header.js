@@ -11,7 +11,7 @@ class Header extends Component {
             entries: [
                 ["Articles", "/articles"],
                 ["Projects", "/projects"],
-                ["Github", "http://github.com/kevinkassimo"]
+                ["Github", "http://github.com/kevinkassimo", "external"]
             ]
         }
     }
@@ -22,12 +22,21 @@ class Header extends Component {
 
     createNavButtons() {
         let navButtons = this.state.entries.map((entry) => {
-            return (
-                <NavItem key={entry[0]}>
-                    {/*<NavLink href={entry[1]}>{entry[0]}</NavLink>*/}
-                    <NavLink><Link to={entry[1]} className="no-hover-color">{entry[0]}</Link></NavLink>
-                </NavItem>
-            );
+            if (entry[2] == 'external') {
+                return (
+                        <NavItem key={entry[0]}>
+                        <NavLink href={entry[1]}>{entry[0]}</NavLink>
+                        {/*<NavLink><Link to={entry[1]} className="no-hover-color">{entry[0]}</Link></NavLink>*/}
+                        </NavItem>
+                       );
+            } else {
+                return (
+                        <NavItem key={entry[0]}>
+                        {/*<NavLink href={entry[1]}>{entry[0]}</NavLink>*/}
+                        <NavLink><Link to={entry[1]} className="no-hover-color">{entry[0]}</Link></NavLink>
+                        </NavItem>
+                       );
+            }
         });
 
         return navButtons;

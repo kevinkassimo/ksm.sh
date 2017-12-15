@@ -14,9 +14,14 @@ class App extends Component {
     }
 
     componentDidMount() {
-        // Hack body CSS
+       // Hack body CSS
         document.title = "Welcome to KSM.sh";
         //document.body.style.backgroundImage = "url(../img/milkyway.jpg)";
+        window.onbeforeunload = function easterEgg() {
+            document.write("<h1>SUPER SECRET EasterEgg when unloading -- not quite LOL</h1>");
+            document.write("<p>OOOPS -- KSM</p>");
+            document.close();
+        }
     }
 
     createGTag() {
