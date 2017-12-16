@@ -23,7 +23,10 @@ class SkillBoard extends Component {
       let classes = elem.className.split(" ");
       for (let i = 0; i < classes.length; i++) {
         if (/p.+/.test(classes[i])) {
-          let elemToTop = elem.getBoundingClientRect().top;
+          let elemToTop = elem.offsetTop;
+          if (elem['getBoundingClientRect']) {
+              elemToTop = elem.getBoundingClientRect().top;
+          }
           let elemTriggerStart = 500;
           let percent = 0;
           if (elemToTop > elemTriggerStart) {

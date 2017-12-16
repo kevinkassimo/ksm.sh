@@ -13,6 +13,11 @@ class App extends Component {
         return;
     }
 
+    componentWillMount() {
+        NodeList.prototype[Symbol.iterator] = [][Symbol.iterator];
+        HTMLCollection.prototype[Symbol.iterator] = [][Symbol.iterator];
+    }
+
     componentDidMount() {
        // Hack body CSS
         document.title = "Welcome to KSM.sh";

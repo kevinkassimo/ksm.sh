@@ -31,7 +31,10 @@ class DashBoard extends Component {
 
   handleScroll = (event) => {
     for (let elem of document.getElementsByClassName("text-dim")) {
-      let nextOpacity = (elem.getBoundingClientRect().top) / this.state.posTop[elem.id];
+      let nextOpacity = (elem.offsetTop) / this.state.posTop[elem.id];
+      if (elem['getBoundingClientRect']) {
+        nextOpacity = (elem.getBoundingClientRect().top) / this.state.posTop[elem.id];
+      }
       if (nextOpacity >= 0) {
         elem.style.opacity = nextOpacity;
       }
