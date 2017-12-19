@@ -120,7 +120,7 @@ class ArticleBoard extends Component {
       }
     }
 
-    if (this.moreBoard.style.display === 'none') {
+    if (!this.moreBoard || this.moreBoard.style.display === 'none') {
       // ignore
     } else {
       if (this.toID <= 0) {
@@ -183,7 +183,7 @@ class ArticleBoard extends Component {
 
           {this.state.articleEntries}
 
-          <div ref={more => this.moreBoard = more} style={{display: "none"}}>
+          <div ref={more => this.moreBoard = more} style={{display: "none"}} onClick={e => this.handleLoadMore(e, true)}>
             <h1 className="article-more">MORE...</h1>
           </div>
         </div>
