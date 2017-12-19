@@ -6,7 +6,9 @@ const path = require('path');
 let pool  = mysql.createPool({
   host     : 'localhost',
   user     : 'root',
-  database : 'ksm_articles'
+  password : '',
+  database : 'ksm_articles',
+  insecureAuth: true
 });
 
 const PAGE_SIZE = 10;
@@ -24,6 +26,9 @@ app.get("/api/article-count", (req, res) => {
   };
 
   pool.getConnection((err, connection) => {
+    if (err) {
+        console.log(err);
+    }
     connection.query('SELECT COUNT(*) AS cnt FROM Articles;', (error, results, fields) => {
       connection.release();
       if (error) {
@@ -89,7 +94,7 @@ app.get("/api/article", (req, res) => {
           "time": "NOT FOUND"
         }
         ======
-        
+
         `);
         res.end();
       } else {
