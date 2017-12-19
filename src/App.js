@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'babel-polyfill';
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,8 +15,8 @@ class App extends Component {
     }
 
     componentWillMount() {
-        NodeList.prototype[Symbol.iterator] = [][Symbol.iterator];
-        HTMLCollection.prototype[Symbol.iterator] = [][Symbol.iterator];
+        // NodeList.prototype[Symbol.iterator] = [][Symbol.iterator];
+        // HTMLCollection.prototype[Symbol.iterator] = [][Symbol.iterator];
     }
 
     componentDidMount() {
