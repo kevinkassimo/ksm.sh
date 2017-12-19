@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e04dfbb6-0550-48a3-8953-9bf45ce723b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/articleComponent/BlogBoard.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/css/BlogBoard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/app.js" afterPath="$PROJECT_DIR$/backend/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/ArticleBoard.js" afterPath="$PROJECT_DIR$/src/component/ArticleBoard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Footer.js" afterPath="$PROJECT_DIR$/src/component/Footer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/ArticleBoard.css" afterPath="$PROJECT_DIR$/src/css/ArticleBoard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-    </list>
+    <list default="true" id="e04dfbb6-0550-48a3-8953-9bf45ce723b5" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -311,12 +300,12 @@
       <workItem from="1508214923045" duration="50295000" />
       <workItem from="1508714005353" duration="1365000" />
       <workItem from="1510437141514" duration="22000" />
-      <workItem from="1513616396717" duration="22353000" />
+      <workItem from="1513616396717" duration="22410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74035000" />
+    <option name="totallyTimeSpent" value="74092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="730" extended-state="6" />
