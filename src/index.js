@@ -11,6 +11,7 @@ import Footer from "./component/Footer";
 import ProjectBoard from "./component/ProjectBoard";
 import ArticleBoard from "./component/ArticleBoard";
 import NotFoundBoard from "./component/NotFoundBoard";
+import BlogBoard from "./component/articleComponent/BlogBoard";
 
 //import registerServiceWorker from './registerServiceWorker';
 
@@ -28,6 +29,7 @@ ReactDOM.render((
           <Route exact path="/" component={DashBoard} />
           <Route path="/articles" component={ArticleBoard} />
           <Route path="/projects" component={ProjectBoard} />
+          <Route path="/blog/:id" component={BlogBoard} />
           <Route path="*" component={NotFoundBoard} />
         </Switch>
         <Footer/>

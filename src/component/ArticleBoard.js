@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container, Button } from 'reactstrap';
 import {SparkScroll, SparkProxy} from './SparkScroll';
+import { Link } from 'react-router-dom';
 
 import '../css/ArticleBoard.css'
 
@@ -86,11 +87,11 @@ class ArticleBoard extends Component {
     }
     return (
       <div className="article-card">
-        <a href={"/blog/" + entry.id}>
+        <Link to={"/blog/" + entry.id} className="no-hover-color">
           <h3 className="article-card-title">{entry.title}</h3>
           <h5 className="article-card-time">{entry.time.split('T')[0]}</h5>
           <div style={{clear: "both"}} />
-        </a>
+        </Link>
       </div>
     )
   };
@@ -160,6 +161,7 @@ class ArticleBoard extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleLoadMore);
   }
 
   render() {

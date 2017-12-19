@@ -11,7 +11,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer" style={{textAlign: "center", backgroundColor: "#157FFC", color: "white", fontSize: "1em", width: "100%", bottom: 0, left: 0, right: 0, display: "block"}}>
-        <span>Copyright Kevin Qian, 2017. Proudly Powered by <strong>ReactJS</strong>, <strong>NOT </strong><strike>WordPress</strike></span>
+        <span>© Kevin Qian, 2017. Proudly Powered by <strong>ReactJS/Express/MySQL</strong>, <strong>NOT </strong><strike>WordPress</strike></span>
       </div>
     );
   }

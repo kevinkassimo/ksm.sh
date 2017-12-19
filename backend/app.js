@@ -13,33 +13,6 @@ const PAGE_SIZE = 10;
 
 const app = express();
 
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
-
-function fastQuery(query) {
-  let connection = mysql.createConnection({
-    host: "localhost",
-    user: "",
-    database: "ksm_articles"
-  });
-
-  connection.connect();
-
-  let result = [];
-  connection.query(query, function (error, results, fields) {
-    if (error) {
-      // silently fail
-    }
-    result = results;
-  });
-
-  connection.end();
-}
-
-
 app.get("/api", (req, res, next) => {
   next();
 });
@@ -64,8 +37,6 @@ app.get("/api/article-count", (req, res) => {
       res.end();
     })
   });
-
-  console.log("RECEIVE REQUEST: /api/article-count")
 });
 
 app.get("/api/article-info", (req, res) => {
@@ -75,7 +46,7 @@ app.get("/api/article-info", (req, res) => {
   }
   let toID = Number(req.query['to']);
   if (toID === undefined || fromID === null) {
-    toID = fromID + 10;
+    toID = fromID + PAGE_SIZE;
   }
 
   let result = {
@@ -83,23 +54,22 @@ app.get("/api/article-info", (req, res) => {
   };
 
   pool.getConnection((err, connection) => {
-    console.log(err);
-    connection.query(`SELECT * FROM Articles WHERE id >= ${fromID} AND id <= ${toID};`,
-      (err, results, fields) => {
+    connection.query(`SELECT id, title, time, file_path FROM Articles WHERE id >= ${fromID} AND id <= ${toID};`,
+      (error, results, fields) => {
         connection.release();
         if (error) {
           // fail silently
           console.log(error);
         } else {
-          result.info = results;
+          for (let row of results) {
+            result.info.push({'id': row.id, 'title': row.title, 'time': row.time, 'file_path': row.file_path})
+          }
         }
         res.status(200);
         res.send(JSON.stringify(result));
         res.end();
       });
   });
-
-  console.log("RECEIVE REQUEST: /api/article-info")
 });
 
 app.get("/api/article", (req, res) => {
@@ -109,8 +79,7 @@ app.get("/api/article", (req, res) => {
   }
 
   pool.getConnection((err, connection) => {
-    console.log(err);
-    connection.query(`SELECT * FROM Articles WHERE id = ${id};`, (err, results, fields) => {
+    connection.query(`SELECT * FROM Articles WHERE id = ${id};`, (error, results, fields) => {
       connection.release();
       if (error) {
         res.status(404);
@@ -127,6 +96,7 @@ app.get("/api/article", (req, res) => {
         fs.readFile(results[0].file_path, (err, contents) => {
           if (err) {
             res.status(404);
+            res.end();
           } else {
             res.status(200);
             res.send(contents);
@@ -145,4 +115,4 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
-app.listen(10000);
+app.listen(80);

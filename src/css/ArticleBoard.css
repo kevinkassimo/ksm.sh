@@ -29,12 +29,12 @@
     margin-top: 1%;
     margin-bottom: 1%;
 
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     padding-top: 2%;
     padding-bottom: 2%;
 
-    border: solid #d0d0d0 2px;
+    border: solid #dbdbdb 1px;
     border-radius: 10px;
 }
 
@@ -57,4 +57,5 @@
 
 .ArticleBoard .article-card-time {
     float: right;
+    padding-top: 6px;
 }
