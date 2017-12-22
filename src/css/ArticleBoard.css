@@ -26,8 +26,8 @@
     margin-left: 5%;
     margin-right: 5%;
 
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
 
     padding-left: 3%;
     padding-right: 3%;
@@ -38,11 +38,19 @@
     border-radius: 10px;
 }
 
+.ArticleBoard .article-card {
+    transform: scale(1, 1);
+    transition: all 0.5s ease;
+}
 .ArticleBoard .article-card a {
     color: black;
     transition: all 0.5s ease;
 
     text-decoration: none;
+}
+.ArticleBoard .article-card:hover {
+    transform: scale(1.04, 1.04);
+    transition: all 0.5s ease;
 }
 .ArticleBoard .article-card a:hover {
     color: #157FFC;

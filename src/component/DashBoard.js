@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Jumbotron, Container, Button } from 'reactstrap';
 import octicons from 'octicons';
 import {SparkScroll, SparkProxy} from './SparkScroll';
+import { Link } from 'react-router-dom';
 
 import '../css/DashBoard.css';
 
@@ -52,7 +53,7 @@ class DashBoard extends Component {
       {title: "Real Name", caption: "Kun Qian (钱坤 / 錢坤)"},
       {title: "Pen Name", caption: "Kismet Kassimo (KSM) (凯斯迈 / 凱斯邁)"},
       {title: "Github Handle", caption: "@kevinkassimo", link: "http://github.com/kevinkassimo"},
-      {title: "Introduction", caption: "Hi, this is Kevin Qian. I am currently a Computer Science junior. Besides, I am also an amateur musician, video uploader (not on Youtube though), and an Indie game developer (not as career, but just for fun). My favorite games are Touhou and The Binding of Isaac. I love Coke (and Pepsi)!"}
+      {title: "Introduction", caption: "Hi, this is Kevin Qian. I am currently a Computer Science junior. Besides, I am also an amateur musician, video content creator (not on Youtube though), and an Indie game developer (not as career, but just for fun). My favorite games are Touhou and The Binding of Isaac. I love Coke (and Pepsi)!"}
     ];
 
     let educationList = [
@@ -68,7 +69,7 @@ class DashBoard extends Component {
       {title: "School Email", caption: "kunqian@ucla.edu"},
       {title: "Personal Email", caption: "kevinkassimo@gmail.com"},
       {title: "Address", caption: "330 De Neve Drive, Westwood, Los Angeles, CA 90024"},
-      {title: "Blog Website", caption: "Expr.IO", link: "http://expr.io"}
+      {title: "Blog Website", caption: "KSM.sh/articles", link: "http://ksm.sh/articles"}
     ];
 
     let skillList = [
@@ -144,7 +145,7 @@ class DashBoard extends Component {
                   <div className="col-md-8">
                     <p style={{textAlign: "center", fontSize: "1.2em", marginTop: "1em"}}>You don't know me before checking out my projects!</p>
                     <div className="row" style={{margin: "2em auto"}}>
-                    <Button className="col-xs-4" color="light" style={{color: "#157FFC", margin: "0 auto"}} href="/projects">Go to Project Page</Button>
+                    <Link to="/projects" style={{margin: "auto"}}><Button className="col-xs-4" color="light" style={{color: "#157FFC", margin: "0 auto"}}>Go to Project Page</Button></Link>
                     </div>
                   </div>
                   <div className="col-md-4">
