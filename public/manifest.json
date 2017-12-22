@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "KSM.sh",
+  "name": "KSM.sh",
+  "description": "Homepage and Blog by Kevin (Kun) 'Kassimo' Qian",
   "icons": [
     {
       "src": "favicon.ico",

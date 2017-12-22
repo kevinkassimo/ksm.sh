@@ -16,7 +16,7 @@
 }
 
 .BlogBoard #article-body {
-    margin-top: 25px;
+    margin-top: 20px;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -35,4 +35,29 @@
 .BlogBoard .no-hover-color:active {
     color: inherit;
     text-decoration: none;
+}
+
+.BlogBoard #share-list {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+.BlogBoard #share-list .share-network {
+  /* display: inline-block; */
+  display: flex;
+  margin-right: 7px;
+}
+
+.BlogBoard #share-list .share-button {
+  /* display: inline-block; */
+  margin-right: 7px;
+}
+
+.BlogBoard .share-count {
+  /* display: inline-block; */
+  font-size: 1.3em;
+  color: #157FFC;
+  margin-right: 7px;
 }
