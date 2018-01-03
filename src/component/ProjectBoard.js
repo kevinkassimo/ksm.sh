@@ -21,7 +21,11 @@ class ProjectBoard extends Component {
 
     let posTop = {};
     for (let elem of document.getElementsByClassName("text-dim")) {
-      posTop[elem.id] = elem.offsetTop;
+      if (elem['getBoundingClientRect']) {
+        posTop[elem.id] = elem.getBoundingClientRect().top;
+      } else {
+        posTop[elem.id] = elem.offsetTop;
+      }
     }
 
     this.setState({posTop: posTop});
@@ -92,15 +96,14 @@ class ProjectBoard extends Component {
 
 
   render() {
-
     return (
       <div>
         <div className="ProjectBoard" onScroll={this.handleScroll}>
           <Jumbotron fluid className="bg-primary" style={{color: "white", margin: 0, width: "100%"}}>
           <Container fluid>
             <div>
-              <h1 className="text-dim project-main-title">Projects</h1>
-              <h3 className="text-dim project-main-subtitle"><i>My projects at a glance</i></h3>
+              <h1 id="project-board-dim-id-0" className="text-dim project-main-title">Projects</h1>
+              <h3 id="project-board-dim-id-1" className="text-dim project-main-subtitle"><i>My projects at a glance</i></h3>
             </div>
           </Container>
         </Jumbotron>

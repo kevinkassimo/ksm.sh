@@ -23,8 +23,11 @@ class DashBoard extends Component {
 
     let posTop = {};
     for (let elem of document.getElementsByClassName("text-dim")) {
-      //posTop[elem.id] = elem.getBoundingClientRect().top;
-      posTop[elem.id] = elem.offsetTop;
+      if (elem['getBoundingClientRect']) {
+        posTop[elem.id] = elem.getBoundingClientRect().top;
+      } else {
+        posTop[elem.id] = elem.offsetTop;
+      }
     }
 
     this.setState({posTop: posTop});
@@ -73,16 +76,16 @@ class DashBoard extends Component {
     ];
 
     let skillList = [
-      {name: "JavaScript", percent: "95%"},
+      {name: "JavaScript/Node", percent: "95%"},
       {name: "Unity3D/C#", percent: "90%"},
       {name: "C", percent: "90%"},
       {name: "HTML/CSS/Sass", percent: "80%"},
       {name: "React", percent: "75%"},
       {name: "Express", percent: "75%"},
       {name: "Python", percent: "75%"},
-      {name: "Node", percent: "70%"},
       {name: "Go", percent: "65%"},
       {name: "jQuery", percent: "60%"},
+      {name: "C++", percent: "60%"},
       {name: "Linux/Shell", percent: "40%"},
       {name: "SQL", percent: "35%"},
       {name: "Jinja", percent: "35%"},
@@ -106,9 +109,11 @@ class DashBoard extends Component {
             <hr className="my-2 text-dim" id="j-text-3" style={{borderColor: "white"}}/>
               <br/>
             <p className="lead text-dim" id="j-text-4">My Github profile is always my best resume.</p>
-            <div className="text-dim">
-              <div style={{float: "left", marginRight: "1em"}} dangerouslySetInnerHTML={{__html: octicons['mark-github'].toSVG({fill: "white", width: "2em", height: "2em"})}} />
+            <div className="text-dim" id="j-text-5" style={{display: "flex"}}>
+              <div style={{marginRight: "1em"}} dangerouslySetInnerHTML={{__html: octicons['mark-github'].toSVG({fill: "white", width: "2em", height: "2em"})}} />
               <Button color="light" style={{color: "#157FFC"}} href="http://github.com/kevinkassimo">Github Profile</Button>
+              <div style={{marginLeft: "1em", marginRight: "1em"}} dangerouslySetInnerHTML={{__html: octicons['file'].toSVG({fill: "white", width: "2em", height: "2em"})}} />
+              <Button color="light" style={{color: "#157FFC"}} href="http://ksm.sh/files/resume.pdf">Resume</Button>
             </div>
               <div style={{paddingTop: "5em"}}/>
             </div>

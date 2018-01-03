@@ -171,8 +171,8 @@ class ArticleBoard extends Component {
           <Jumbotron fluid className="bg-primary" style={{color: "white", margin: 0, width: "100%"}}>
             <Container fluid>
               <div>
-                <h1 className="text-dim article-main-title">Articles</h1>
-                <h3 className="text-dim article-main-subtitle"><i>My posts</i></h3>
+                <h1 id="article-board-dim-id-0" className="text-dim article-main-title">Articles</h1>
+                <h3 id="article-board-dim-id-1" className="text-dim article-main-subtitle"><i>My posts</i></h3>
               </div>
             </Container>
           </Jumbotron>
