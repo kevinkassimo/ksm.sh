@@ -125,6 +125,9 @@ app.get("/api/article", (req, res) => {
                                 res.end();
                             } else {
                                 res.status(200);
+                                res.set({
+                                  'Cache-Control': 'public, max-age=300'
+                                });
                                 res.send(contents);
                                 res.end();
                             }
@@ -137,13 +140,13 @@ app.get("/api/article", (req, res) => {
 });
 
 // serving special static files under path "files"
-app.use('/files', express.static(path.resolve(__dirname, 'files')));
+app.use('/files', express.static(path.resolve(__dirname, 'files'), {maxAge: '5m'}));
 
 // serving other static files normally
-app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.static(path.resolve(__dirname, 'public'), {maxAge: '5m'}));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'), {maxAge: '5m'});
 });
 
 app.listen(80);
