@@ -13,6 +13,7 @@ import ArticleBoard from "./component/ArticleBoard";
 import NotFoundBoard from "./component/NotFoundBoard";
 import BlogBoard from "./component/articleComponent/BlogBoard";
 
+import withTracker from './withTracker';
 //import registerServiceWorker from './registerServiceWorker';
 
 const ScrollToTop = () => {
@@ -24,7 +25,7 @@ ReactDOM.render((
     <BrowserRouter>
       <div>
         <Route component={ScrollToTop} />
-        <Route path="/" component={App} />
+        <Route path="/" component={withTracker(App)} />
         <Switch>
           <Route exact path="/" component={DashBoard} />
           <Route path="/articles" component={ArticleBoard} />

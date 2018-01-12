@@ -63,8 +63,9 @@ class DashBoard extends Component {
       {title: "Education", caption: "University of California, Los Angeles (UCLA)"},
       {title: "Degree", caption: "B.S. Computer Science (Junior, graduating Spring 2019)"},
       {title: "GPA", caption: "3.97 / 4.00"},
-      {title: "Course Taken", caption: "Operating System, Networking, Programming Language, Database, Artificial Intelligence"},
-      {title: "Activites", caption: "Web Developer @ DailyBruin Prime"},
+      {title: "Course Taken", caption: "Operating System, Networking, Programming Language, Database, Artificial Intelligence, Web Application"},
+      {title: "Activites 1", caption: "Web Developer @ DailyBruin Prime"},
+      {title: "Activites 2", caption: "Software Engineering Intern @ Tutorfly"},
       {title: "Honors", caption: "UCLA UPE Computer Science Honor Society Member"}
     ];
 

@@ -55,7 +55,7 @@ class App extends Component {
                 <div>
                 <Header />
                 {this.renderChildren()}
-                {this.createGTag()}
+                {/*this.createGTag()*/}
                 </div>
                );
     }
