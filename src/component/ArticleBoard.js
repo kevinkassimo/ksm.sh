@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Jumbotron, Container, Button } from 'reactstrap';
 import {SparkScroll, SparkProxy} from './SparkScroll';
 import { Link } from 'react-router-dom';
+import FlipMove from 'react-flip-move';
 
 import '../css/ArticleBoard.css'
 
@@ -181,7 +182,9 @@ class ArticleBoard extends Component {
             <h1 className="article-loading">LOADING...</h1>
           </div>
 
-          {this.state.articleEntries}
+          <FlipMove duration={750} easing="ease-out">
+            {this.state.articleEntries}
+          </FlipMove>
 
           <div ref={more => this.moreBoard = more} style={{display: "none"}} onClick={e => this.handleLoadMore(e, true)}>
             <h1 className="article-more">MORE...</h1>
