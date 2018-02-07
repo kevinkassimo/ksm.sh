@@ -16,7 +16,6 @@ class ChatRoom extends Component {
       currentMessage: '',
       messages: [
         new ChatMessage('KSM', 'Welcome to ChatRoom! Type whatever you want here!', 'PINNED'),
-        new ChatMessage('Me', 'Hello world', '2018-01-01', true),
       ]
     };
 
@@ -40,9 +39,12 @@ class ChatRoom extends Component {
             });
           }
         } catch (_) {
+          console.log(_);
         }
       }
-    } catch (_) {}
+    } catch (_) {
+      console.log(_);
+    }
   }
 
   handleSubmit = () => {

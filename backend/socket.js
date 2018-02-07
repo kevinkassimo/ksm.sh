@@ -64,7 +64,7 @@ wss.on('connection', function connection(ws) {
 
           pool.getConnection((err, connection) => {
             connection.query(
-              `INSERT INTO Chats(author, body, time_stamp) VALUES (${message['author']}, ${message['body']}, CURDATE());`,
+              `INSERT INTO Chats(author, body, time_stamp) VALUES ("${message['author']}", "${message['body']}", CURDATE());`,
               (error) => {
               console.log(error);
             })
@@ -90,6 +90,8 @@ wss.on('connection', function connection(ws) {
         default:
           return;
       }
+    } catch (_) {
+      console.log(_);
     }
   });
 });
