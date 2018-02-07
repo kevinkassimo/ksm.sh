@@ -12,6 +12,7 @@ import ProjectBoard from "./component/ProjectBoard";
 import ArticleBoard from "./component/ArticleBoard";
 import NotFoundBoard from "./component/NotFoundBoard";
 import BlogBoard from "./component/articleComponent/BlogBoard";
+import ChatToggle from './component/ChatToggle';
 
 import withTracker from './withTracker';
 //import registerServiceWorker from './registerServiceWorker';
@@ -34,6 +35,7 @@ ReactDOM.render((
           <Route path="*" component={NotFoundBoard} />
         </Switch>
         <Footer/>
+        <ChatToggle/>
       </div>
     </BrowserRouter>
     ),
