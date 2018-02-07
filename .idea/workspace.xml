@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e04dfbb6-0550-48a3-8953-9bf45ce723b5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/socket.js" afterPath="$PROJECT_DIR$/backend/socket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/chatComponent/ChatRoom.js" afterPath="$PROJECT_DIR$/src/component/chatComponent/ChatRoom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/chatComponent/ChatWindow.js" afterPath="$PROJECT_DIR$/src/component/chatComponent/ChatWindow.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -79,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="socket.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="socket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/socket.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="464">
@@ -99,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatWindow.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChatWindow.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/chatComponent/ChatWindow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+            <state relative-caret-position="480">
+              <caret line="48" column="53" lean-forward="false" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -182,8 +180,8 @@
         <option value="$PROJECT_DIR$/src/css/ChatRoom.css" />
         <option value="$PROJECT_DIR$/src/component/chatComponent/ChatRoom.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/component/chatComponent/ChatWindow.js" />
         <option value="$PROJECT_DIR$/backend/socket.js" />
+        <option value="$PROJECT_DIR$/src/component/chatComponent/ChatWindow.js" />
       </list>
     </option>
   </component>
@@ -323,12 +321,12 @@
       <workItem from="1510437141514" duration="22000" />
       <workItem from="1513616396717" duration="22410000" />
       <workItem from="1517788515531" duration="12320000" />
-      <workItem from="1517869050465" duration="14512000" />
+      <workItem from="1517869050465" duration="14932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100924000" />
+    <option name="totallyTimeSpent" value="101344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="730" extended-state="6" />
@@ -679,14 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/chatComponent/ChatModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -709,16 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/ChatToggle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/ChatRoom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
@@ -727,13 +707,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/chatComponent/ChatWindow.js">
+    <entry file="file://$PROJECT_DIR$/backend/socket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="464">
+          <caret line="54" column="49" lean-forward="true" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -747,11 +725,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/socket.js">
+    <entry file="file://$PROJECT_DIR$/src/component/ChatToggle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="54" column="49" lean-forward="true" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
+        <state relative-caret-position="397">
+          <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/chatComponent/ChatModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/chatComponent/ChatWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="48" column="53" lean-forward="false" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

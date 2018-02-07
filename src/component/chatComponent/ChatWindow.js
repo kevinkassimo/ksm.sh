@@ -46,8 +46,8 @@ class ChatWindow extends Component {
         <div className="chatroom__window" onMouseEnter={this.setBodyScrollOff} onMouseLeave={this.setBodyScrollOn}
              onTouchStart={this.setBodyScrollOff} onTouchEnd={this.setBodyScrollOn}>
           {this.generateMessageDisplay()}
+          <div ref={(el) => this.messagesEnd = el} />
         </div>
-        <div ref={(el) => this.messagesEnd = el} />
       </div>
     )
   }
