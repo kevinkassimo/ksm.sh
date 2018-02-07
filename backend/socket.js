@@ -51,6 +51,7 @@ wss.on('connection', function connection(ws) {
                   });
                 }
               }
+              replyBody.messages.reverse(); // the order is reversed!
               ws.send(JSON.stringify(replyBody));
             });
           });

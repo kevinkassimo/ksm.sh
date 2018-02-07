@@ -25,9 +25,11 @@ class ChatRoom extends Component {
   handleInitMessages() {
     try {
       this.webSocket = new WebSocket('ws://ksm.sh:10000');
-      this.webSocket.send(JSON.stringify({
-        type: 'init' // init to tell server that this is my first fetch
-      }));
+      this.webSocket.onopen = () => {
+        this.webSocket.send(JSON.stringify({
+          type: 'init' // init to tell server that this is my first fetch
+        }));
+      }
 
       this.webSocket.onmessage = (event) => {
         try {
@@ -47,7 +49,7 @@ class ChatRoom extends Component {
     }
   }
 
-  handleSubmit = () => {
+  handleSubmit = (event) => {
     const {
       author,
       currentMessage
@@ -74,6 +76,8 @@ class ChatRoom extends Component {
         $push: [new ChatMessage(author, currentMessage, moment().format('YYYY-MM-DD'), true)]
       })
     });
+
+    this.inputField.value = ''; // clear field
   };
 
   componentDidMount() {
@@ -99,7 +103,9 @@ class ChatRoom extends Component {
         <p className="chatroom__username">You are granted the pseudo-name: <strong>{this.state.author}</strong></p>
         <ChatWindow messages={messages} />
         <div className="chatroom__footer">
-          <input className="chatroom__footer-input" type="text" onChange={event => this.setState({ currentMessage : event.target.value }) } />
+          <input className="chatroom__footer-input" type="text"
+                 onChange={event => this.setState({ currentMessage : event.target.value }) }
+                 ref={(el) => this.inputField = el}/>
           <button className="chatroom__footer-submit" onClick={this.handleSubmit}>Submit</button>
         </div>
       </div>

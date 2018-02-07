@@ -36,11 +36,18 @@ class ChatWindow extends Component {
     document.body.style.overflow = 'hidden';
   }
 
+  componentDidUpdate() {
+    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+  }
+
   render() {
     return (
-      <div className="chatroom__window" onMouseEnter={this.setBodyScrollOff} onMouseLeave={this.setBodyScrollOn}
-        onTouchStart={this.setBodyScrollOff} onTouchEnd={this.setBodyScrollOn}>
-        {this.generateMessageDisplay()}
+      <div>
+        <div className="chatroom__window" onMouseEnter={this.setBodyScrollOff} onMouseLeave={this.setBodyScrollOn}
+             onTouchStart={this.setBodyScrollOff} onTouchEnd={this.setBodyScrollOn}>
+          {this.generateMessageDisplay()}
+        </div>
+        <div ref={(el) => this.messagesEnd = el} />
       </div>
     )
   }
