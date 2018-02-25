@@ -24,7 +24,7 @@ class ChatRoom extends Component {
 
   handleInitMessages() {
     try {
-      this.webSocket = new WebSocket('ws://ksm.sh:10000');
+      this.webSocket = new WebSocket('wss://ksm.sh/chat');
       this.webSocket.onopen = () => {
         this.webSocket.send(JSON.stringify({
           type: 'init' // init to tell server that this is my first fetch
