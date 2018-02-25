@@ -49,6 +49,9 @@ class ProjectBoard extends Component {
 
   generateYearWrappers() {
     let listProjects = [
+      {year: 2018, projects: [
+        {title: "Memo4Me", caption: "Message forwarding & Privacy Personal Page, React + Meteor", link: "https://github.com/kevinkassimo/memo4me"}
+      ]},
       {year: 2017, projects: [
         {title: "UDEngine", caption: "A minimal and extensible bullet-hell game framework on Unity3D", link: "https://github.com/UD-Engine/UDEngine"},
         {title: "DailyBruin Prime", caption: "Online Magazine for DailyBruin Prime, with Jinja2/Foundation/Flask, etc.", link: "https://github.com/daily-bruin/prime"},
