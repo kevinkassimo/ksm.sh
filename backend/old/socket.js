@@ -5,11 +5,6 @@ const path = require('path');
 const moment = require('moment');
 const xss = require('xss');
 
-const {
-  server,
-  httpsServer,
-} = require('./app.js');
-
 let pool  = mysql.createPool({
   host     : 'localhost',
   user     : 'root',
@@ -18,18 +13,11 @@ let pool  = mysql.createPool({
   insecureAuth: true
 });
 
-/*
 const wss = new WebSocket.Server({
   port: 10000,
   headers: {
     "Access-Control-Allow-Origin": "*"
   }
-});
-*/
-
-const wss = new WebSocket.Server({
-  server: httpsServer,
-  path: '/chat',
 });
 
 wss.on('connection', function connection(ws) {
@@ -108,9 +96,3 @@ wss.on('connection', function connection(ws) {
     }
   });
 });
-
-module.exports = {
-  httpServer: server,
-  httpsWsServer: httpsServer,
-}
-

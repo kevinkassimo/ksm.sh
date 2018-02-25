@@ -3,7 +3,6 @@ const compression = require('compression');
 const mysql = require('mysql');
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
 
 let pool  = mysql.createPool({
     host     : 'localhost',
@@ -17,17 +16,6 @@ const PAGE_SIZE = 10;
 const FILE_PATH = path.join(__dirname, 'files');
 
 const app = express();
-
-// force https
-app.use('/', function(req, res, next) {
-  if(!req.secure) {
-    var secureUrl = "https://" + req.headers['host'] + req.url;
-    res.writeHead(301, { "Location":  secureUrl });
-    res.end();
-  }
-  next();
-});
-
 app.use(compression({threshold: 0}));
 
 app.get("/api", (req, res, next) => {
@@ -90,7 +78,7 @@ app.get("/api/article-info", (req, res) => {
                             console.log(error);
                         } else {
                             for (let row of results) {
-                                result.info.push({'id': row.id, 'title': row.title, 'time': row.time})
+                                result.info.push({'id': row.id, 'title': row.title, 'time': row.time, 'file_path': row.file_path})
                             }
                         }
                         res.status(200);
@@ -161,15 +149,4 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'), {maxAge: '5m'});
 });
 
-const options = {
-  cert: fs.readFileSync('../ssl/fullchain.pem'),
-  key: fs.readFileSync('../ssl/privkey.pem'),
-}
-
-module.exports = {
-  server: app,
-  httpsServer: https.createServer(options, app),
-}
-// app.listen(80);
-// https.createServer(options, app).listen(443);
-
+app.listen(80);
