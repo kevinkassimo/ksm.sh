@@ -15,7 +15,7 @@ import BlogBoard from "./component/articleComponent/BlogBoard";
 import ChatToggle from './component/ChatToggle';
 
 import withTracker from './withTracker';
-//import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 
 const ScrollToTop = () => {
   window.scrollTo(0, 0);
