@@ -1,5 +1,7 @@
 const express = require('express');
 const compression = require('compression');
+const helmet = require('helmet');
+const csp = require('helmet-csp');
 const mysql = require('mysql');
 const fs = require('fs');
 const path = require('path');
@@ -18,6 +20,18 @@ const FILE_PATH = path.join(__dirname, 'files');
 
 const app = express();
 
+app.use(compression({threshold: 0})); // enable compression gzip
+app.use(helmet()); // add multiple security related header
+app.use(csp({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://*.google-analytics.com", "https://*.google.com", "https://*.facebook.com"],
+    imgSrc: ["'self'", "https://*.google.com", "data:", "https://*.google-analytics.com"],
+    connectSrc: ["'self'", "https://*.google.com", "wss://ksm.sh"],
+    styleSrc: ["'self'", "'unsafe-inline'"],
+  },
+}));
+
 // force https
 app.use('/', function(req, res, next) {
   if(!req.secure) {
@@ -27,8 +41,6 @@ app.use('/', function(req, res, next) {
   }
   next();
 });
-
-app.use(compression({threshold: 0}));
 
 app.get("/api", (req, res, next) => {
     next();
