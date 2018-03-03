@@ -1,8 +1,8 @@
 const CACHE_NAME = 'ksm.sh-cache-v0.0.1';
 const urlsToCache = [
   '/',
-  '/img/',
-  '/static/'
+  '/img/*',
+  '/static/*'
 ];
 
 self.addEventListener('install', function(event) {
@@ -13,6 +13,7 @@ self.addEventListener('install', function(event) {
         return cache.addAll(urlsToCache);
       })
   );
+  console.log('Service worker installed')
 });
 
 self.addEventListener('fetch', function(event) {
@@ -65,4 +66,5 @@ self.addEventListener('activate', function(event) {
       );
     })
   );
+  console.log('Service worker activated')
 });
