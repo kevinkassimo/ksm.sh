@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { Jumbotron, Container, Button } from 'reactstrap';
-// import ec from 'express-comment-frontend';
+import { Jumbotron, Container, Button, Badge } from 'reactstrap';
+import ec from 'express-comment-frontend';
 
 import CommentCard from './CommentCard';
 import CommentComment from './CommentComment';
+import '../../css/CommentBoard.css';
 
-// const comment = ec(window, '/api/comments');
-const comment = {};
+const comment = ec(window, '/api/comments');
+
 
 class CommentBoard extends Component {
   constructor(props) {
@@ -55,15 +56,18 @@ class CommentBoard extends Component {
       articleId
     } = this.props;
 
-    /*
     comment.findRootAll(true).on(articleId.toString()).fire()
       .then((arr) => {
         arr.sort((a, b) => new Date(b.modifiedAt) - new Date(a.modifiedAt));
+        arr.forEach((e) => {
+          if (e.reply) {
+            e.reply.sort((a, b) => new Date(b.modifiedAt) - new Date(a.modifiedAt));
+          }
+        });
         this.setState({
           comments: arr,
         });
       });
-      */
   }
 
   publishComment = (username, body) => {
@@ -77,6 +81,11 @@ class CommentBoard extends Component {
       })
       .then((arr) => {
         arr.sort((a, b) => new Date(b.modifiedAt) - new Date(a.modifiedAt));
+        arr.forEach((e) => {
+          if (e.reply) {
+            e.reply.sort((a, b) => new Date(b.modifiedAt) - new Date(a.modifiedAt));
+          }
+        });
         this.setState({
           comments: arr,
         });
@@ -94,6 +103,11 @@ class CommentBoard extends Component {
       })
       .then((arr) => {
         arr.sort((a, b) => new Date(b.modifiedAt) - new Date(a.modifiedAt));
+        arr.forEach((e) => {
+          if (e.reply) {
+            e.reply.sort((a, b) => new Date(b.modifiedAt) - new Date(a.modifiedAt));
+          }
+        });
         this.setState({
           comments: arr,
         });
@@ -109,7 +123,7 @@ class CommentBoard extends Component {
                               username={c.username}
                               body={c.body}
                               date={c.modifiedAt}
-                              isRoot={false}
+                              isRoot={true}
                               addReply={this.publishReply} />);
       if (c.reply) {
         c.reply.forEach((r, ind) => {
@@ -118,7 +132,7 @@ class CommentBoard extends Component {
                                   username={r.username}
                                   body={r.body}
                                   date={r.modifiedAt}
-                                  isRoot={true} />)
+                                  isRoot={false} />)
         });
       }
     });
@@ -128,8 +142,8 @@ class CommentBoard extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Comments</h3>
+      <div className="comment-board">
+        <h3 className="comment-title">Comments <Badge color="secondary">BETA</Badge></h3>
         {this.showComments()}
         <CommentComment addComment={this.publishComment} />
       </div>

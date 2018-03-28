@@ -1,0 +1,34 @@
+.comment-board {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.comment-title {
+    top: 100px;
+    color: #157FFC;
+    text-align: center;
+}
+
+.comment-comment {
+    margin-bottom: 3em;
+}
+
+.comment-card {
+    border: 1px solid #e7eaed;
+    border-radius: 1em;
+
+    margin: 1em;
+    padding: 1em;
+
+    transition: all 1s ease-out;
+}
+
+.comment-card-indent {
+    border: 1px solid #e7eaed;
+    background-color: #e7eaed;
+    margin-left: 10%;
+}
+
+.comment-reply {
+    margin-top: 1em;
+}

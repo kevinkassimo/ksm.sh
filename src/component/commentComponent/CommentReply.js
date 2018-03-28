@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Jumbotron, Container, Button } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 class CommentReply extends Component {
   constructor(props) {
@@ -44,14 +44,23 @@ class CommentReply extends Component {
     } = this.state;
 
     return (
-      <div>
-        <form onSubmit={this.handleReplySubmit}>
-          <input type="text" value={username}
-                 onChange={({ target }) => this.setState({ username: target.value })} />
-          <textarea cols="30" rows="10" value={body}
-                    onChange={({ target }) => this.setState({ body: target.value })} />
-          <button type="submit">Submit</button>
-        </form>
+      <div className="comment-reply">
+        <h5>Reply:</h5>
+        <Form>
+          <FormGroup>
+            <Label for="cr-name">Name</Label>
+            <Input type="text" name="cr-name" placeholder="Your name..." value={username}
+                   onChange={({ target }) => this.setState({ username: target.value })} />
+          </FormGroup>
+
+          <FormGroup>
+            <Label for="cr-body">Reply Body</Label>
+            <Input type="textarea" name="cr-body" placeholder="Reply body goes here..." value={body}
+                   onChange={({ target }) => this.setState({ body: target.value })} />
+          </FormGroup>
+
+          <Button disabled={!username || !body} onClick={this.handleReplySubmit}>Submit</Button>
+        </Form>
       </div>
     );
   }
