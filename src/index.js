@@ -14,6 +14,8 @@ import NotFoundBoard from "./component/NotFoundBoard";
 import BlogBoard from "./component/articleComponent/BlogBoard";
 import ChatToggle from './component/ChatToggle';
 
+// import CommentBoard from './component/commentComponent/CommentBoard';
+
 import withTracker from './withTracker';
 // import registerServiceWorker from './registerServiceWorker';
 
@@ -32,6 +34,7 @@ ReactDOM.render((
           <Route path="/articles" component={ArticleBoard} />
           <Route path="/projects" component={ProjectBoard} />
           <Route path="/blog/:id" component={BlogBoard} />
+          {/*<Route path="/temp" component={CommentBoard} />*/}
           <Route path="*" component={NotFoundBoard} />
         </Switch>
         <Footer/>
