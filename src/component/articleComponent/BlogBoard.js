@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container, Button } from 'reactstrap';
 import {SparkScroll, SparkProxy} from '../SparkScroll';
+import CommentBoard from '../commentComponent/CommentBoard';
 
 import '../../css/BlogBoard.css'
 
@@ -56,7 +57,8 @@ class BlogBoard extends Component {
       title: "Loading...",
       subtitle: "Loading...",
       body: "",
-      shareButtons: []
+      shareButtons: [],
+      notLoaded: true,
     };
   }
 
@@ -77,7 +79,8 @@ class BlogBoard extends Component {
               that.craftShareIcon('facebook', document.URL, meta.title + " - KSM.sh"),
               that.craftShareIcon('twitter', document.URL, meta.title + " - KSM.sh"),
               that.craftShareIcon('google', document.URL, meta.title + " - KSM.sh")
-            ]
+            ],
+            notLoaded: false,
           });
           that.hideLoadingBoard();
         } catch (e) {
@@ -188,6 +191,9 @@ class BlogBoard extends Component {
           </div>
           <div id="article-body" dangerouslySetInnerHTML={{__html: this.state.body}} />
         </div>
+        {!this.state.notLoaded &&
+          <CommentBoard articleId={this.props.match.params.id.toString()} />
+        }
       </div>
     );
   }

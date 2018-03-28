@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const compression = require('compression');
 const helmet = require('helmet');
 const csp = require('helmet-csp');
@@ -6,6 +7,9 @@ const mysql = require('mysql');
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+
+const ec = require('express-comment');
+const drivers = ec.drivers;
 
 let pool  = mysql.createPool({
     host     : 'localhost',
@@ -35,7 +39,7 @@ app.use(csp({
 // force https
 app.use('/', function(req, res, next) {
   if(!req.secure) {
-    var secureUrl = "https://" + req.headers['host'] + req.url;
+    let secureUrl = "https://" + req.headers['host'] + req.url;
     res.writeHead(301, { "Location":  secureUrl });
     res.end();
   }
@@ -162,6 +166,41 @@ app.get("/api/article", (req, res) => {
         }
     });
 });
+
+// comment middleware
+const sql_settings = {
+  database: 'ksm-comments',
+  username: 'root',
+  password: '',
+
+  settings: {
+    host: 'localhost',
+    dialect: 'mysql',
+
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000,
+    },
+  },
+};
+
+const ecSettings = {
+  maxReplyLevel: 2,
+};
+
+const rejectDelete = (req, res, next) => {
+  if (req.body && req.body.action) {
+    if (req.body.action.toString().toLowerCase() === 'delete') {
+      next('delete rejected');
+    } else {
+      next();
+    }
+  }
+};
+
+app.use('/api/comments', bodyParser.urlencoded({ extended: true }), rejectDelete, ec(drivers.sql(sql_settings), ecSettings));
 
 // serving special static files under path "files"
 app.use('/files', express.static(path.resolve(__dirname, 'files'), {maxAge: '5m'}));
