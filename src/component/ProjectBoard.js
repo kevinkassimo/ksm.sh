@@ -50,7 +50,7 @@ class ProjectBoard extends Component {
   generateYearWrappers() {
     let listProjects = [
       {year: 2018, projects: [
-        {title: "express-comment", caption: "Simple comment/post/response management middleware for Express", link: "https://github.com/kevinkassimo/express-comment"},
+        {title: "express-comment", caption: "Simple comment/post/response middleware for Express, powering comments of this site", link: "https://github.com/kevinkassimo/express-comment"},
         {title: "vhttps", caption: "Virtual Secure Server, host multiple HTTPS site on single port/IP address", link: "https://github.com/kevinkassimo/vhttps"},
         {title: "Memo4Me", caption: "Message forwarding & Privacy Personal Page, React + Meteor", link: "https://github.com/kevinkassimo/memo4me"},
       ]},

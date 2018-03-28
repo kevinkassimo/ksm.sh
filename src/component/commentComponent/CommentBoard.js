@@ -14,40 +14,7 @@ class CommentBoard extends Component {
     super(props);
 
     this.state = {
-      comments: [{
-        "_id":"5abacf30a2515db919edd6df",
-        "username":"kevin",
-        "body":"0",
-        "assoc":"a",
-        "parentId":null,
-        "opaque":null,
-        "level":0,
-        "createdAt":"2018-03-27T23:09:36.751Z",
-        "modifiedAt":"2018-03-27T23:09:36.751Z",
-        "reply":[{
-          "_id":"5abadbb9921a12c16e18927c",
-          "username":"kevin",
-          "body":"1",
-          "assoc":"a",
-          "parentId":"5abacf30a2515db919edd6df",
-          "opaque":null,
-          "level":1,
-          "createdAt":"2018-03-28T00:03:05.706Z",
-          "modifiedAt":"2018-03-28T00:03:05.706Z",
-          "reply":[]
-        }]
-      }, {
-        "_id":"5abad627f6cd72bf37bba533",
-        "username":"kevin",
-        "body":"S",
-        "assoc":"a",
-        "parentId":null,
-        "opaque":null,
-        "level":0,
-        "createdAt":"2018-03-27T23:39:19.878Z",
-        "modifiedAt":"2018-03-27T23:39:19.878Z",
-        "reply":[]
-      }],
+      comments: [],
     };
   }
 
@@ -97,7 +64,7 @@ class CommentBoard extends Component {
       articleId
     } = this.props;
     // I am just too lazy of doing caching myself...
-    comment.comment(body).by(username).to(parentId).fire()
+    comment.reply(body).by(username).to(parentId).fire()
       .then(() => {
         return comment.findRootAll(true).on(articleId.toString()).fire()
       })

@@ -194,6 +194,8 @@ const rejectDelete = (req, res, next) => {
   if (req.body && req.body.action) {
     if (req.body.action.toString().toLowerCase() === 'delete') {
       next('delete rejected');
+    } else {
+      next();
     }
   }
 };

@@ -12,17 +12,10 @@ class CommentReply extends Component {
   }
 
   handleReplySubmit = () => {
-    let {
+    const {
       username,
       body,
     } = this.state;
-
-    if (!username) {
-      username = '(unknown)';
-    }
-    if (!body) {
-      body = '(empty)';
-    }
 
     const {
       addReply,

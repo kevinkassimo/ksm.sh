@@ -37,8 +37,8 @@ class CommentCard extends Component {
             })}>{isReplyShown ? 'Hide Reply...' : 'Reply...'}</Button>
         }
         {isReplyShown &&
-          <CommentReply parentId={postId} addReply={() => {
-            this.props.addReply();
+          <CommentReply parentId={postId} addReply={(username, body, parentId) => {
+            this.props.addReply(username, body, parentId);
             this.setState({
               isReplyShown: false,
             });
