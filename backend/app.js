@@ -31,7 +31,7 @@ app.use(csp({
     defaultSrc: ["'self'"],
     scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://*.google-analytics.com", "https://*.google.com", "https://*.facebook.com"],
     imgSrc: ["'self'", "https://*.google.com", "data:", "https://*.google-analytics.com"],
-    connectSrc: ["'self'", "https://*.google.com", "wss://ksm.sh"],
+    connectSrc: ["'self'", "https://*.google.com", "wss://ksm.sh", "https://*.facebook.com"],
     styleSrc: ["'self'", "'unsafe-inline'"],
   },
 }));

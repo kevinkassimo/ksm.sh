@@ -44,9 +44,17 @@ self.addEventListener('fetch', function(event) {
         return fetch(fetchRequest).then(
           function(response) {
             // Check if we received a valid response
-            if(!response || response.status !== 200 || response.type !== 'basic') {
+            if (!response || Math.floor(response.status / 100) !== 2 || response.type !== 'basic') {
               return response;
             }
+            
+            // Avoid caching /api path
+            if (fetchRequest.url.indexOf('/api/') >= 0) {
+              // don't cache this path
+              return response;
+            }
+
+            // Cache others
 
             // IMPORTANT: Clone the response. A response is a stream
             // and because we want the browser to consume the response
