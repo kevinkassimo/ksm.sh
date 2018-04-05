@@ -23,23 +23,23 @@ const ScrollToTop = () => {
 };
 
 ReactDOM.render((
-    <BrowserRouter>
-      <div>
-        <Route component={ScrollToTop} />
-        <Route path="/" component={withTracker(App)} />
-        <Switch>
-          <Route exact path="/" component={DashBoard} />
-          <Route path="/articles" component={ArticleBoard} />
-          <Route path="/projects" component={ProjectBoard} />
-          <Route path="/blog/:id" component={BlogBoard} />
-          <Route path="*" component={NotFoundBoard} />
-        </Switch>
-        <Footer/>
-        <ChatToggle/>
-      </div>
-    </BrowserRouter>
-    ),
-    document.getElementById('root'));
+  <BrowserRouter>
+    <div>
+      <Route component={ScrollToTop} />
+      <Route path="/" component={withTracker(App)} />
+      <Switch>
+        <Route exact path="/" component={DashBoard} />
+        <Route path="/articles" component={ArticleBoard} />
+        <Route path="/projects" component={ProjectBoard} />
+        <Route path="/blog/:id" component={BlogBoard} />
+        <Route path="*" component={NotFoundBoard} />
+      </Switch>
+      <Footer/>
+      <ChatToggle/>
+    </div>
+  </BrowserRouter>
+),
+document.getElementById('root'));
 
 
 // registerServiceWorker();

@@ -86,20 +86,20 @@ class CommentBoard extends Component {
 
     this.state.comments.forEach((c, i) => {
       cards.push(<CommentCard key={`c-${i}`}
-                              postId={c._id}
-                              username={c.username}
-                              body={c.body}
-                              date={c.modifiedAt}
-                              isRoot={true}
-                              addReply={this.publishReply} />);
+        postId={c._id}
+        username={c.username}
+        body={c.body}
+        date={c.modifiedAt}
+        isRoot={true}
+        addReply={this.publishReply} />);
       if (c.reply) {
         c.reply.forEach((r, ind) => {
           cards.push(<CommentCard key={`c-${i}-${ind}`}
-                                  postId={r._id}
-                                  username={r.username}
-                                  body={r.body}
-                                  date={r.modifiedAt}
-                                  isRoot={false} />)
+            postId={r._id}
+            username={r.username}
+            body={r.body}
+            date={r.modifiedAt}
+            isRoot={false} />)
         });
       }
     });

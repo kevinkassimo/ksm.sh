@@ -97,43 +97,43 @@ class DashBoard extends Component {
 
     return (
       <div>
-      <div className="DashBoard" onScroll={this.handleScroll}>
-        <Jumbotron fluid className="bg-primary" style={{color: "white", margin: 0, width: "100%"}}>
-          <Container fluid>
-            <div style={{paddingLeft: "5%"}}>
-            <h1 className="display-1 text-dim" id="j-text-0" style={{paddingTop: "5%"}}>Hi</h1>
-            <br/>
-              <br/>
-            <h1 className="display-5 text-dim" id="j-text-1">Welcome to KSM.sh</h1>
-            <br/>
-            <p className="lead text-dim" id="j-text-2">Homepage of Kevin (Kun) "KSM" Qian</p>
-            <hr className="my-2 text-dim" id="j-text-3" style={{borderColor: "white"}}/>
-              <br/>
-            <p className="lead text-dim" id="j-text-4">My Github profile is always my best resume.</p>
-            <div className="text-dim" id="j-text-5" style={{display: "flex"}}>
-              <div style={{marginRight: "1em"}} dangerouslySetInnerHTML={{__html: octicons['mark-github'].toSVG({fill: "white", width: "2em", height: "2em"})}} />
-              <Button color="light" style={{color: "#157FFC"}} href="http://github.com/kevinkassimo">Github Profile</Button>
-              <div style={{marginLeft: "1em", marginRight: "1em"}} dangerouslySetInnerHTML={{__html: octicons['file'].toSVG({fill: "white", width: "2em", height: "2em"})}} />
-              <Button color="light" style={{color: "#157FFC"}} href="http://ksm.sh/files/resume.pdf">Resume</Button>
-            </div>
-              <div style={{paddingTop: "5em"}}/>
-            </div>
-          </Container>
-        </Jumbotron>
-      </div>
+        <div className="DashBoard" onScroll={this.handleScroll}>
+          <Jumbotron fluid className="bg-primary" style={{color: "white", margin: 0, width: "100%"}}>
+            <Container fluid>
+              <div style={{paddingLeft: "5%"}}>
+                <h1 className="display-1 text-dim" id="j-text-0" style={{paddingTop: "5%"}}>Hi</h1>
+                <br/>
+                <br/>
+                <h1 className="display-5 text-dim" id="j-text-1">Welcome to KSM.sh</h1>
+                <br/>
+                <p className="lead text-dim" id="j-text-2">Homepage of Kevin (Kun) "KSM" Qian</p>
+                <hr className="my-2 text-dim" id="j-text-3" style={{borderColor: "white"}}/>
+                <br/>
+                <p className="lead text-dim" id="j-text-4">My Github profile is always my best resume.</p>
+                <div className="text-dim" id="j-text-5" style={{display: "flex"}}>
+                  <div style={{marginRight: "1em"}} dangerouslySetInnerHTML={{__html: octicons['mark-github'].toSVG({fill: "white", width: "2em", height: "2em"})}} />
+                  <Button color="light" style={{color: "#157FFC"}} href="http://github.com/kevinkassimo">Github Profile</Button>
+                  <div style={{marginLeft: "1em", marginRight: "1em"}} dangerouslySetInnerHTML={{__html: octicons['file'].toSVG({fill: "white", width: "2em", height: "2em"})}} />
+                  <Button color="light" style={{color: "#157FFC"}} href="http://ksm.sh/files/resume.pdf">Resume</Button>
+                </div>
+                <div style={{paddingTop: "5em"}}/>
+              </div>
+            </Container>
+          </Jumbotron>
+        </div>
 
-      <SplitBoard imgPos="left" imgName="octoface" title="About"
-                  points={aboutMeList}
-                  boardColor="white" textColor="#157FFC"/>
+        <SplitBoard imgPos="left" imgName="octoface" title="About"
+          points={aboutMeList}
+          boardColor="white" textColor="#157FFC"/>
 
 
 
         <SplitBoard imgPos="right" imgName="mortar-board" title="Education"
-                    points={educationList}
-                    boardColor="#157FFC" textColor="white"/>
+          points={educationList}
+          boardColor="#157FFC" textColor="white"/>
 
         <SkillBoard title="Skills" skills={skillList}
-                    boardColor="white" textColor="#157FFC"/>
+          boardColor="white" textColor="#157FFC"/>
 
 
 
@@ -151,7 +151,7 @@ class DashBoard extends Component {
                   <div className="col-md-8">
                     <p style={{textAlign: "center", fontSize: "1.2em", marginTop: "1em"}}>You don't know me before checking out my projects!</p>
                     <div className="row" style={{margin: "2em auto"}}>
-                    <Link to="/projects" style={{margin: "auto"}}><Button className="col-xs-4" color="light" style={{color: "#157FFC", margin: "0 auto"}}>Go to Project Page</Button></Link>
+                      <Link to="/projects" style={{margin: "auto"}}><Button className="col-xs-4" color="light" style={{color: "#157FFC", margin: "0 auto"}}>Go to Project Page</Button></Link>
                     </div>
                   </div>
                   <div className="col-md-4">
@@ -166,8 +166,8 @@ class DashBoard extends Component {
 
 
         <SplitBoard imgPos="left" imgName="mail" title="Contact"
-                    points={contactList}
-                    boardColor="white" textColor="#157FFC"/>
+          points={contactList}
+          boardColor="white" textColor="#157FFC"/>
       </div>
     );
   }

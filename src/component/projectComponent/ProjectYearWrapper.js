@@ -26,10 +26,10 @@ class ProjectYearWrapper extends Component {
       let cards = this.props.cards.map((card) => {
         return (
           <div className="col-sm-12 col-md-4">
-          <ProjectCard key={"project-card-" + currKey++}
-                            title={card.title}
-                            caption={card.caption}
-                            link={card.link} /*this may be undefined*/ />
+            <ProjectCard key={"project-card-" + currKey++}
+              title={card.title}
+              caption={card.caption}
+              link={card.link} /*this may be undefined*/ />
           </div>
         );
       });
@@ -71,17 +71,17 @@ class ProjectYearWrapper extends Component {
     return (
       <div>
         {/*<SparkScroll.div timeline={{*/}
-          {/*// 'topBottom': {opacity: 0, transform: 'translate3d(-200px,0px,0px)'},*/}
-          {/*// 'topTop-400': {opacity: 1, transform: 'translate3d(0px,0px,0px)'}*/}
-          {/*'topBottom': {transform: 'translateX(-100px)'},*/}
-          {/*'topTop-600': {transform: 'translateX(0px)'}*/}
+        {/*// 'topBottom': {opacity: 0, transform: 'translate3d(-200px,0px,0px)'},*/}
+        {/*// 'topTop-400': {opacity: 1, transform: 'translate3d(0px,0px,0px)'}*/}
+        {/*'topBottom': {transform: 'translateX(-100px)'},*/}
+        {/*'topTop-600': {transform: 'translateX(0px)'}*/}
         {/*}}>*/}
         {this.renderYearMarks()}
         {this.renderCards()}
         {/*</SparkScroll.div>*/}
       </div>
-      );
-    }
+    );
   }
+}
 
-  export default ProjectYearWrapper;
+export default ProjectYearWrapper;

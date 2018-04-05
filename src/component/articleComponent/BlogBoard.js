@@ -14,29 +14,12 @@ import {
 const {
   FacebookShareButton,
   GooglePlusShareButton,
-  LinkedinShareButton,
   TwitterShareButton,
-  PinterestShareButton,
-  VKShareButton,
-  OKShareButton,
-  TelegramShareButton,
-  WhatsappShareButton,
-  RedditShareButton,
-  EmailShareButton,
-  TumblrShareButton,
-  LivejournalShareButton,
-  MailruShareButton,
 } = ShareButtons;
 
 const {
   FacebookShareCount,
   GooglePlusShareCount,
-  LinkedinShareCount,
-  PinterestShareCount,
-  VKShareCount,
-  OKShareCount,
-  RedditShareCount,
-  TumblrShareCount,
 } = ShareCounts;
 const FacebookIcon = generateShareIcon('facebook');
 const TwitterIcon = generateShareIcon('twitter');
@@ -109,65 +92,65 @@ class BlogBoard extends Component {
 
   craftShareIcon = (typeName, shareUrl, title) => {
     switch (typeName) {
-      case "facebook":
-        return (
-          <div className="share-network">
-            <FacebookShareButton
-              url={shareUrl}
-              quote={title}
-              className="share-button">
-              <FacebookIcon
-                size={32}
-                round />
-              </FacebookShareButton>
+    case "facebook":
+      return (
+        <div className="share-network">
+          <FacebookShareButton
+            url={shareUrl}
+            quote={title}
+            className="share-button">
+            <FacebookIcon
+              size={32}
+              round />
+          </FacebookShareButton>
 
-            <FacebookShareCount
-              url={shareUrl}
-              className="share-count">
-              {count => count}
-            </FacebookShareCount>
-          </div>
-        );
-        break;
-      case "twitter":
-        return (
-          <div className="share-network">
-            <TwitterShareButton
-              url={shareUrl}
-              title={title}
-              className="share-button">
-              <TwitterIcon
-                size={32}
-                round />
-            </TwitterShareButton>
-          </div>
-        );
-        break;
-      case "google":
-        return (
-          <div className="share-network">
-            <GooglePlusShareButton
-              url={shareUrl}
-              className="share-button">
-              <GooglePlusIcon
-                size={32}
-                round />
-              </GooglePlusShareButton>
+          <FacebookShareCount
+            url={shareUrl}
+            className="share-count">
+            {count => count}
+          </FacebookShareCount>
+        </div>
+      );
+      break;
+    case "twitter":
+      return (
+        <div className="share-network">
+          <TwitterShareButton
+            url={shareUrl}
+            title={title}
+            className="share-button">
+            <TwitterIcon
+              size={32}
+              round />
+          </TwitterShareButton>
+        </div>
+      );
+      break;
+    case "google":
+      return (
+        <div className="share-network">
+          <GooglePlusShareButton
+            url={shareUrl}
+            className="share-button">
+            <GooglePlusIcon
+              size={32}
+              round />
+          </GooglePlusShareButton>
 
-            <GooglePlusShareCount
-              url={shareUrl}
-              className="share-count">
-              {count => count}
-            </GooglePlusShareCount>
-          </div>
-        );
-        break;
-      default:
-        return (
-          <div/>
-        );
+          <GooglePlusShareCount
+            url={shareUrl}
+            className="share-count">
+            {count => count}
+          </GooglePlusShareCount>
+        </div>
+      );
+      break;
+    default:
+      return (
+        <div/>
+      );
     }
-  }
+  };
 
   render() {
     return (

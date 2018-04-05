@@ -87,8 +87,8 @@ class ProjectBoard extends Component {
     let renderedYearProjects = listProjects.map((entry) => {
       return (
         <ProjectYearWrapper key={"project-year-wrapper-" + currKey++}
-                            year={entry.year}
-                            cards={entry.projects} />
+          year={entry.year}
+          cards={entry.projects} />
       );
     });
 
@@ -105,13 +105,13 @@ class ProjectBoard extends Component {
       <div>
         <div className="ProjectBoard" onScroll={this.handleScroll}>
           <Jumbotron fluid className="bg-primary" style={{color: "white", margin: 0, width: "100%"}}>
-          <Container fluid>
-            <div>
-              <h1 id="project-board-dim-id-0" className="text-dim project-main-title">Projects</h1>
-              <h3 id="project-board-dim-id-1" className="text-dim project-main-subtitle"><i>My projects at a glance</i></h3>
-            </div>
-          </Container>
-        </Jumbotron>
+            <Container fluid>
+              <div>
+                <h1 id="project-board-dim-id-0" className="text-dim project-main-title">Projects</h1>
+                <h3 id="project-board-dim-id-1" className="text-dim project-main-subtitle"><i>My projects at a glance</i></h3>
+              </div>
+            </Container>
+          </Jumbotron>
 
 
           <Jumbotron style={{backgroundColor: "white", color: "#157FFC", margin: 0}}>
@@ -121,53 +121,6 @@ class ProjectBoard extends Component {
             </Container>
           </Jumbotron>
         </div>
-
-        {/*<SplitBoard imgPos="left" imgName="octoface" title="About"*/}
-                    {/*points={aboutMeList}*/}
-                    {/*boardColor="white" textColor="#157FFC"/>*/}
-
-
-
-        {/*<SplitBoard imgPos="right" imgName="mortar-board" title="Education"*/}
-                    {/*points={educationList}*/}
-                    {/*boardColor="#157FFC" textColor="white"/>*/}
-
-        {/*<SkillBoard title="Skills" skills={skillList}*/}
-                    {/*boardColor="white" textColor="#157FFC"/>*/}
-
-
-
-        {/*<div className="SplitBoard" onScroll={this.handleScroll}>*/}
-          {/*<Jumbotron fluid style={{backgroundColor: "#157FFC", color: "white", margin: 0}}>*/}
-            {/*<Container fluid>*/}
-              {/*<SparkScroll.div timeline={{*/}
-                {/*// 'topBottom': {opacity: 0, transform: 'translate3d(-200px,0px,0px)'},*/}
-                {/*// 'topTop-400': {opacity: 1, transform: 'translate3d(0px,0px,0px)'}*/}
-                {/*'topBottom': {opacity: 0, transform: 'translateX(-200px)'},*/}
-                {/*'topTop-400': {opacity: 1, transform: 'translateX(0px'}*/}
-              {/*}}>*/}
-                {/*<h1 style={{textAlign: "center"}}>Projects</h1>*/}
-                {/*<div className="row">*/}
-                  {/*<div className="col-md-8">*/}
-                    {/*<p style={{textAlign: "center", fontSize: "1.2em", marginTop: "1em"}}>You don't know me before checking out my projects!</p>*/}
-                    {/*<div className="row" style={{margin: "2em auto"}}>*/}
-                      {/*<Button className="col-xs-4" color="light" style={{color: "#157FFC", margin: "0 auto"}} href="/projects">Go to Project Page</Button>*/}
-                    {/*</div>*/}
-                  {/*</div>*/}
-                  {/*<div className="col-md-4">*/}
-                    {/*<div style={{textAlign: "center", display: "block"}} dangerouslySetInnerHTML={{__html: octicons.repo.toSVG({width: "200", height: "200", fill: "white"})}} />*/}
-                  {/*</div>*/}
-                {/*</div>*/}
-              {/*</SparkScroll.div>*/}
-            {/*</Container>*/}
-          {/*</Jumbotron>*/}
-        {/*</div>*/}
-
-
-
-        {/*<SplitBoard imgPos="left" imgName="mail" title="Contact"*/}
-                    {/*points={contactList}*/}
-                    {/*boardColor="white" textColor="#157FFC"/>*/}
       </div>
     );
   }

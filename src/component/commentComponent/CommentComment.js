@@ -49,12 +49,12 @@ class CommentComment extends Component {
           <FormGroup>
             <Label for="c-username">Name</Label>
             <Input type="text" name="c-username" placeholder="Your name..." value={username}
-                   onChange={({ target }) => this.setState({ username: target.value })} />
+              onChange={({ target }) => this.setState({ username: target.value })} />
           </FormGroup>
           <FormGroup>
             <Label for="c-body">Comment Body</Label>
             <Input type="textarea" name="c-body" placeholder="Comment goes here..." value={body}
-                      onChange={({ target }) => this.setState({ body: target.value })} />
+              onChange={({ target }) => this.setState({ body: target.value })} />
           </FormGroup>
 
           <Button color="primary" disabled={!username || !body} onClick={this.handleCommentSubmit}>Submit</Button>

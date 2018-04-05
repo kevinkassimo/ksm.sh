@@ -50,28 +50,28 @@ class SplitBoard extends Component {
       return (
         <SparkScroll.div timeline={this.generateScrollTimeLine()}>
           <h1 style={{textAlign: "center"}}>{this.props.title}</h1>
-        <div className="row">
-          <div className="col-md-4">
-            {this.renderImage()}
+          <div className="row">
+            <div className="col-md-4">
+              {this.renderImage()}
+            </div>
+            <div className="col-md-8">
+              {this.renderText()}
+            </div>
           </div>
-          <div className="col-md-8">
-            {this.renderText()}
-          </div>
-        </div>
         </SparkScroll.div>
       );
     } else {
       return (
         <SparkScroll.div timeline={this.generateScrollTimeLine()}>
           <h1 style={{textAlign: "center"}}>{this.props.title}</h1>
-        <div className="row">
-          <div className="col-md-8">
-            {this.renderText()}
+          <div className="row">
+            <div className="col-md-8">
+              {this.renderText()}
+            </div>
+            <div className="col-md-4">
+              {this.renderImage()}
+            </div>
           </div>
-          <div className="col-md-4">
-            {this.renderImage()}
-          </div>
-        </div>
         </SparkScroll.div>
       );
     }

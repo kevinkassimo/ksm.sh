@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container, Button } from 'reactstrap';
-import octicons from 'octicons';
 import {SparkScroll, SparkProxy} from './SparkScroll';
 
 import '../css/SplitBoard.css';
@@ -25,7 +24,7 @@ class SkillBoard extends Component {
         if (/p.+/.test(classes[i])) {
           let elemToTop = elem.offsetTop;
           if (elem['getBoundingClientRect']) {
-              elemToTop = elem.getBoundingClientRect().top;
+            elemToTop = elem.getBoundingClientRect().top;
           }
           let elemTriggerStart = 500;
           let percent = 0;
@@ -99,34 +98,6 @@ class SkillBoard extends Component {
         {groupHTML}
       </div>
     );
-
-    // if (this.props.imgPos === 'left') {
-    //   return (
-    //     <SparkScroll.div timeline={this.generateScrollTimeLine()}>
-    //       <div className="row">
-    //         <div className="col-md-4">
-    //           {this.renderImage()}
-    //         </div>
-    //         <div className="col-md-8">
-    //           {this.renderText()}
-    //         </div>
-    //       </div>
-    //     </SparkScroll.div>
-    //   );
-    // } else {
-    //   return (
-    //     <SparkScroll.div timeline={this.generateScrollTimeLine()}>
-    //       <div className="row">
-    //         <div className="col-md-8">
-    //           {this.renderText()}
-    //         </div>
-    //         <div className="col-md-4">
-    //           {this.renderImage()}
-    //         </div>
-    //       </div>
-    //     </SparkScroll.div>
-    //   );
-    // }
   }
 
 
