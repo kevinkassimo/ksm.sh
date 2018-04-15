@@ -25,7 +25,7 @@ class App extends Component {
     //document.body.style.backgroundImage = "url(../img/milkyway.jpg)";
     window.onbeforeunload = function easterEgg() {
       document.write(`
-<div style="position: absolute; left: 50%; transform: translateX(-50%); color: #157FFC; font-family: Arial;">
+<div style="position: absolute; left: 50%; transform: translateX(-50%); color: #157EFB; font-family: Arial;">
 <h1>BYE!</h1>
 <p><em>(Wait... this is an unloading EasterEgg?)</em></p>
 </div>

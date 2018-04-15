@@ -34,8 +34,8 @@ const GooglePlusIcon = generateShareIcon('google');
 // });
 
 class BlogBoard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       title: "Loading...",
       subtitle: "Loading...",

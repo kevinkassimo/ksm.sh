@@ -1,0 +1,77 @@
+{
+  "about": [
+    {"title": "Preferred Name", "caption": "Kevin Qian"},
+    {"title": "Real Name", "caption": "Kun Qian (钱坤 / 錢坤)"},
+    {"title": "Pen Name", "caption": "Kismet Kassimo (KSM) (凯斯迈 / 凱斯邁)"},
+    {"title": "Github Handle", "caption": "@kevinkassimo", "link": "http://github.com/kevinkassimo"},
+    {"title": "Introduction", "caption": "Hi, this is Kevin Qian. I am currently a Computer Science junior. Besides, I am also an amateur musician, video content creator (not on Youtube though), and an Indie game developer (not as career, but just for fun). My favorite games are Touhou and The Binding of Isaac. I love Coke (and Pepsi)!"}
+  ],
+  "education": [
+    {"title": "Education", "caption": "University of California, Los Angeles (UCLA)"},
+    {"title": "Degree", "caption": "B.S. Computer Science (Junior, graduating Spring 2019)"},
+    {"title": "GPA", "caption": "3.97 / 4.00"},
+    {"title": "Course Taken", "caption": "Operating System, Networking, Programming Language, Database, Artificial Intelligence, Web Application"},
+    {"title": "Activites 1", "caption": "Web Developer @ UCLA DevX (bquest)"},
+    {"title": "Activites 2", "caption": "Web Developer @ DailyBruin Prime"},
+    {"title": "Activites 3", "caption": "Software Engineering Intern @ Tutorfly"},
+    {"title": "Honors", "caption": "UCLA UPE Computer Science Honor Society Member"}
+  ],
+  "contact": [
+    {"title":"School Email", "caption":"kunqian@ucla.edu"},
+    {"title":"Personal Email", "caption":"kevinkassimo@gmail.com"},
+    {"title":"Address", "caption":"330 De Neve Drive, Westwood, Los Angeles, CA 90024"},
+    {"title":"Blog Website", "caption":"KSM.sh/articles", "link":"http://ksm.sh/articles"}
+  ],
+  "skill": [
+    {"name":"JavaScript/Node", "percent":"95%"},
+    {"name":"Unity3D/C#", "percent":"90%"},
+    {"name":"C", "percent":"90%"},
+    {"name":"HTML/CSS/Sass", "percent":"80%"},
+    {"name":"React", "percent":"80%"},
+    {"name":"Express", "percent":"80%"},
+    {"name":"Python", "percent":"75%"},
+    {"name":"Go", "percent":"65%"},
+    {"name":"jQuery", "percent":"60%"},
+    {"name":"C++", "percent":"60%"},
+    {"name":"Linux/Shell", "percent":"40%"},
+    {"name":"SQL/Mongo", "percent":"40%"},
+    {"name":"Jinja/Nunjucks", "percent":"35%"},
+    {"name":"PHP/Java/JSP", "percent":"35%"},
+    {"name":"Swift", "percent":"35%"},
+    {"name":"Angular", "percent":"35%"},
+    {"name":"numpy", "percent":"35%"}
+  ],
+  "project": [
+    {"year":2018,"projects":[
+      {"title":"express-comment","caption":"Simple comment/post/response middleware for Express, powering comments of this site","link":"https://github.com/kevinkassimo/express-comment"},
+      {"title":"vhttps","caption":"Virtual Secure Server, host multiple HTTPS site on single port/IP address","link":"https://github.com/kevinkassimo/vhttps"},
+      {"title":"Memo4Me","caption":"Message forwarding & Privacy Personal Page, React + Meteor","link":"https://github.com/kevinkassimo/memo4me"}
+    ]},
+    {"year":2017,"projects":[
+      {"title":"UDEngine","caption":"A minimal and extensible bullet-hell game framework on Unity3D","link":"https://github.com/UD-Engine/UDEngine"},
+      {"title":"DailyBruin Prime","caption":"Online Magazine for DailyBruin Prime, with Jinja2/Foundation/Flask, etc.","link":"https://github.com/daily-bruin/prime"},
+      {"title":"KSM.sh","caption":"THIS site, with React, Express, MySQL, Bootstrap, etc.","link":"https://github.com/kevinkassimo/ksm.sh"},
+      {"title":"GOKey","caption":"Command-line password vault using AES, written in Go","link":"https://github.com/kevinkassimo/gokey"},
+      {"title":"wotHappen","caption":"Bot on Cisco Spark using Microsoft Cognitive Service API and Sumy library","link":"https://github.com/wotHappen/wothappen"},
+      {"title":"slices","caption":"Go slice package to improve slice operation readability","link":"https://github.com/kevinkassimo/slices"},
+      {"title":"CatchLA","caption":"Powerful course scanner with auto-enroll, using PhantomJS, systemd","link":"https://github.com/kevinkassimo/catchla"},
+      {"title":"BUHTIG.com","caption":"Go to first OR N-th commit of any Github repository, full-stack with Node & jQuery","link":"https://github.com/kevinkassimo/buhtig"},
+      {"title":"DomainCatch","caption":"Brute force 4-letter domain availability WHOIS search, with Bash or raw C","link":"https://github.com/kevinkassimo/DomainCatch"},
+      {"title":"CryptoUpdate","caption":"PhantomJS crawl of coinMarketCap.com, get latest cryptocurrency price","link":"https://github.com/kevinkassimo/CryptoUpdate"},
+      {"title":"ValuateHack","caption":"Simple cookie hack on Valuate.com (so sorry...)","link":"https://github.com/kevinkassimo/ValuateHack"},
+      {"title":"SEASHelper","caption":"UCLA SEAS Linux Server simple helper, command parsed with Flex & Bison","link":"https://github.com/kevinkassimo/SEASHelper"},
+      {"title":"Delp","caption":"Chrome extension for UCLA dining service ratings (discontinued)","link":"https://github.com/kevinkassimo/Delp"},
+      {"title":"Glut","caption":".IO multiplayer game with Phaser, WebGL, HTML5","link":"https://github.com/iSavor/glut"}
+    ]},
+    {"year":2016,"projects":[
+      {"title":"BAAAM!","caption":"iOS/Windows/Mac/Linux game, innovative recreation of BlockBreaker","link":"http://ludumdare.com/compo/minild-67/?action=preview&uid=99828"},
+      {"title":"EarthWorm","caption":"Game entry for Mini Ludum Dare 67, with Unity3D","link":"https://github.com/kevinkassimo/Snake"},
+      {"title":"SerendiBuddy","caption":"iOS app that finds comments left nearby with CoreLocation","link":"https://github.com/M117Project/SerendiBuddy"},
+      {"title":"PathReader-2D","caption":"Unity3D plugin, parses parametric equation paths and move GameObjects","link":"https://github.com/PathReader/PathReader-2D"},
+      {"title":"JSOpen","caption":"Command-line option parser for NodeJS, inspired by Python's optparse library","link":"https://github.com/Jsopen/JSopen_optparser"}
+    ]},
+    {"year":2015,"projects":[
+      {"title":"Kismet Project","caption":"Bullet-hell (Danmaku) game on Unity, inspired by Touhou"}
+    ]}
+  ]
+}

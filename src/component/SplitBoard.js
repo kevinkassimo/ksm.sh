@@ -6,8 +6,8 @@ import {SparkScroll, SparkProxy} from './SparkScroll';
 import '../css/SplitBoard.css'
 
 class SplitBoard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
     };
   }
@@ -32,15 +32,13 @@ class SplitBoard extends Component {
   generateScrollTimeLine() {
     if (this.props.imgPos === 'left') {
       return {
-        // 'topBottom': {opacity: 0, transform: 'translate3d(-200px,0px,0px)'},
-        // 'topTop-400': {opacity: 1, transform: 'translate3d(0px,0px,0px)'}
-        'topBottom': {opacity: 0, transform: 'translateX(-200px)'},
-        'topTop-400': {opacity: 1, transform: 'translateX(0px'}
+        'topBottom-50': {opacity: 0, transform: 'translateX(-200px)'},
+        'topBottom+250': {opacity: 1, transform: 'translateX(0px'}
       };
     } else {
       return {
-        'topBottom': {opacity: 0, transform: 'translateX(-200px)'},
-        'topTop-400': {opacity: 1, transform: 'translateX(0px)'}
+        'topBottom-50': {opacity: 0, transform: 'translateX(200px)'},
+        'topBottom+250': {opacity: 1, transform: 'translateX(0px)'}
       };
     }
   }

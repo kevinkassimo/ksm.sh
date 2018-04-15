@@ -1,3 +1,4 @@
+// This service worker is deprecated
 var CACHE_NAME = "sw-precache-v3-sw-precache-webpack-plugin-"+(self.registration?self.registration.scope:"");
 
 self.addEventListener('install', function(event) {

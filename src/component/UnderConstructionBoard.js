@@ -5,8 +5,8 @@ import {SparkScroll, SparkProxy} from './SparkScroll';
 
 
 class UnderConstructionBoard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {

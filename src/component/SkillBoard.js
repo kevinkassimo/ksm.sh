@@ -6,8 +6,8 @@ import '../css/SplitBoard.css';
 import '../css/Circle.css';
 
 class SkillBoard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
     };
     this.handleScroll = this.handleScroll.bind(this);
@@ -55,12 +55,12 @@ class SkillBoard extends Component {
     let count = 0;
     let circles = this.props.skills.map((skill) => {
       return (
-        <div className="col-sm-12 col-md-4" key={"circles" + count++} style={{marginBottom: "4em"}}>
+        <div className="col-sm-12 col-lg-3" key={"circles" + count++} style={{marginBottom: "4em"}}>
           <div className="fill-circle c100 p50 big" style={{zIndex: 0, float: "none", textAlign: "center", margin: "0 auto", marginBottom: "10px"}} align="center">
-            <span style={{color: "#157FFC"}}>{skill.percent}</span>
+            <span style={{color: "#157EFB"}}>{skill.percent}</span>
             <div className="slice">
-              <div className="bar" style={{borderColor: "#157FFC"}} />
-              <div className="fill" style={{borderColor: "#157FFC"}} />
+              <div className="bar" style={{borderColor: "#157EFB"}} />
+              <div className="fill" style={{borderColor: "#157EFB"}} />
             </div>
           </div>
           <div style={{textAlign: "center", fontSize: "2em"}}>{skill.name}</div>
@@ -71,7 +71,7 @@ class SkillBoard extends Component {
     let groups = [];
     let currGroup = [];
     for (let elem of circles) {
-      if (currGroup.length >= 3) {
+      if (currGroup.length >= 4) {
         groups.push(currGroup);
         currGroup = [];
       }
@@ -88,6 +88,7 @@ class SkillBoard extends Component {
           {group[0]}
           {group[1]}
           {group[2]}
+          {group[3]}
         </div>
       );
     });

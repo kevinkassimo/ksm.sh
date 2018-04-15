@@ -8,8 +8,8 @@ import '../css/ArticleBoard.css'
 
 
 class ArticleBoard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       posTop: {},
       articleEntries: []
