@@ -183,6 +183,7 @@
     margin-right: auto;
     margin-top: 1px;
     margin-bottom: 1px;
+    word-wrap: break-word;
 }
 
 .chatroom__message--self .chatroom__message-header {
