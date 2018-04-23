@@ -24,10 +24,10 @@
   ],
   "skill": [
     {"name":"JavaScript/Node", "percent":"95%"},
+    {"name":"React", "percent":"90%"},
     {"name":"Unity3D/C#", "percent":"90%"},
     {"name":"C", "percent":"90%"},
     {"name":"HTML/CSS/Sass", "percent":"80%"},
-    {"name":"React", "percent":"80%"},
     {"name":"Express", "percent":"80%"},
     {"name":"Python", "percent":"75%"},
     {"name":"Go", "percent":"65%"},
@@ -43,13 +43,15 @@
   ],
   "project": [
     {"year":2018,"projects":[
+      {"title":"react-alt-context","caption":"Alternative context API for React 16, with decorators or connectors", "link":"https://github.com/kevinkassimo/react-alt-context"},
+      {"title":"bquest","caption":"Web Developer at UCLA DevX bquest team, mainly working on frontend stuff","link":"https://github.com/ucladevx/bQuest-Frontend"},
       {"title":"express-comment","caption":"Simple comment/post/response middleware for Express, powering comments of this site","link":"https://github.com/kevinkassimo/express-comment"},
       {"title":"vhttps","caption":"Virtual Secure Server, host multiple HTTPS site on single port/IP address","link":"https://github.com/kevinkassimo/vhttps"},
       {"title":"Memo4Me","caption":"Message forwarding & Privacy Personal Page, React + Meteor","link":"https://github.com/kevinkassimo/memo4me"}
     ]},
     {"year":2017,"projects":[
       {"title":"UDEngine","caption":"A minimal and extensible bullet-hell game framework on Unity3D","link":"https://github.com/UD-Engine/UDEngine"},
-      {"title":"DailyBruin Prime","caption":"Online Magazine for DailyBruin Prime, with Jinja2/Foundation/Flask, etc.","link":"https://github.com/daily-bruin/prime"},
+      {"title":"DailyBruin Prime","caption":"Online Magazine for DailyBruin Prime, with Nunjucks/Keystone/Mongo, etc.","link":"https://github.com/daily-bruin/prime"},
       {"title":"KSM.sh","caption":"THIS site, with React, Express, MySQL, Bootstrap, etc.","link":"https://github.com/kevinkassimo/ksm.sh"},
       {"title":"GOKey","caption":"Command-line password vault using AES, written in Go","link":"https://github.com/kevinkassimo/gokey"},
       {"title":"wotHappen","caption":"Bot on Cisco Spark using Microsoft Cognitive Service API and Sumy library","link":"https://github.com/wotHappen/wothappen"},
