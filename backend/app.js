@@ -118,7 +118,7 @@ app.get("/api/article-info", (req, res) => {
 });
 
 app.get("/api/article", (req, res) => {
-  let id = req.query.id;
+  let id = +req.query.id;
   if (id === undefined || id === null) {
     id = 1;
   }
