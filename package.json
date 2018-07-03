@@ -44,18 +44,22 @@
     "underscore": "^1.8.3",
     "whatwg-fetch": "^2.0.4",
     "ws": "^4.1.0",
-    "xss": "^0.3.7"
+    "xss": "^0.3.7",
+    "snyk": "^1.88.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "node_modules/.bin/eslint --ext .jsx,.js --fix ."
+    "lint": "node_modules/.bin/eslint --ext .jsx,.js --fix .",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0"
-  }
+  },
+  "snyk": true
 }
