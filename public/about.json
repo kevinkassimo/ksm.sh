@@ -11,7 +11,7 @@
     {"title": "Degree", "caption": "B.S. Computer Science (Junior, graduating Spring 2019)"},
     {"title": "GPA", "caption": "3.97 / 4.00"},
     {"title": "Course Taken", "caption": "Operating System, Networking, Programming Language, Database, Artificial Intelligence, Web Application, Machine Learning, Automata Theory"},
-    {"title":"Internship", "caption": "Software Engineering Intern @ Google"},
+    {"title":"Internship", "caption": "Software Engineering Intern @ Google (AMP Project)"},
     {"title": "Activites 1", "caption": "Web Developer @ UCLA DevX (bquest)"},
     {"title": "Activites 2", "caption": "Web Developer @ DailyBruin Prime"},
     {"title": "Activites 3", "caption": "Software Engineering Intern @ Tutorfly"},
@@ -28,6 +28,7 @@
     {"name":"React", "percent":"90%"},
     {"name":"Unity3D/C#", "percent":"90%"},
     {"name":"C", "percent":"90%"},
+    {"name":"AMP", "percent":"90%"},
     {"name":"HTML/CSS/Sass", "percent":"80%"},
     {"name":"Express", "percent":"80%"},
     {"name":"Python", "percent":"75%"},
@@ -38,12 +39,12 @@
     {"name":"SQL/Mongo", "percent":"40%"},
     {"name":"Jinja/Nunjucks", "percent":"35%"},
     {"name":"PHP/Java/JSP", "percent":"35%"},
-    {"name":"Swift", "percent":"35%"},
     {"name":"Angular", "percent":"35%"},
     {"name":"numpy", "percent":"35%"}
   ],
   "project": [
     {"year":2018,"projects":[
+      {"title":"amp-image-slider","caption":"Image compare slider component for Accelerated Mobile Pages (AMP Project)","link":"https://github.com/ampproject/amphtml/tree/master/extensions/amp-image-slider"},
       {"title":"callo","caption":"Minimal encrypted stateful HTTP API phone-styled calls, inspired by JWT","link":"https://github.com/kevinkassimo/callo"},
       {"title":"react-alt-context","caption":"Alternative context API for React 16, with decorators or connectors", "link":"https://github.com/kevinkassimo/react-alt-context"},
       {"title":"bquest","caption":"Web Developer at UCLA DevX bquest team, mainly working on frontend stuff","link":"https://github.com/ucladevx/bQuest-Frontend"},

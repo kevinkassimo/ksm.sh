@@ -13,7 +13,7 @@ const {
 let pool  = mysql.createPool({
   host     : 'localhost',
   user     : 'root',
-  password : '',
+  password : process.env.MYSQL_PASSWORD,
   database : 'ksm_chat',
   insecureAuth: true
 });
