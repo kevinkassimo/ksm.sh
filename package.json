@@ -32,7 +32,7 @@
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1",
+    "react-scripts": "1.1.5",
     "react-share": "^1.19.0",
     "react-spark-scroll": "^4.0.0",
     "react-spark-scroll-gsap": "^4.0.0",
