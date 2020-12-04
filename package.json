@@ -12,7 +12,7 @@
     "express-comment-frontend": "^0.1.0",
     "faker": "^4.1.0",
     "helmet": "^3.12.0",
-    "highlight.js": "^9.12.0",
+    "highlight.js": "^10.4.1",
     "immutability-helper": "^2.6.6",
     "jquery": "^3.3.1",
     "marked": "^0.3.19",
