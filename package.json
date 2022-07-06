@@ -16,7 +16,7 @@
     "immutability-helper": "^2.6.6",
     "jquery": "^3.3.1",
     "marked": "^0.3.19",
-    "moment": "^2.21.0",
+    "moment": "^2.29.4",
     "mysql": "^2.15.0",
     "node-sass-chokidar": "0.0.3",
     "octicons": "^7.2.0",
